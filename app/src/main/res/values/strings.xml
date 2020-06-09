@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PremierLeagueStickerAlbum</string>
+    <string name="teams_not_data_message">Album je potpuno prazan!</string>
 </resources>
