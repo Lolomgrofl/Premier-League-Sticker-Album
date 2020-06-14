@@ -20,5 +20,6 @@
         </activity>
         <activity android:name=".teams.ui.TeamsActivity" />
         <activity android:name=".teams.ui.CreateTeamActivity" />
+        <activity android:name=".teams.ui.TeamDetailsActivity" />
     </application>
 </manifest>

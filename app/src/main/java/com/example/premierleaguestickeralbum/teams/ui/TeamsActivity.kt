@@ -72,5 +72,12 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
         teamsAdapter =
             TeamsAdapter(this)
         teamsRecyclerView.adapter = teamsAdapter
+
+        teamsAdapter.setOnClickListener(object :
+            TeamsAdapter.TeamClickListener {
+            override fun onTeamClicked(team: Tim) {
+                startActivity(TeamDetailsActivity.newInstance(this@TeamsActivity, team))
+            }
+        })
     }
 }
