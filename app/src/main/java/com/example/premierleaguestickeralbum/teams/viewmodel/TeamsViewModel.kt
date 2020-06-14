@@ -1,4 +1,4 @@
-package com.example.premierleaguestickeralbum.teams
+package com.example.premierleaguestickeralbum.teams.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.premierleaguestickeralbum.networking.NetworkClient

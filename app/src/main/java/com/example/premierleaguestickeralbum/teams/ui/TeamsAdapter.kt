@@ -1,4 +1,4 @@
-package com.example.premierleaguestickeralbum.teams
+package com.example.premierleaguestickeralbum.teams.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -17,8 +17,11 @@ class TeamsAdapter(private val context: Context) : RecyclerView.Adapter<TeamsAda
     private lateinit var teams: List<Tim>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
-            TeamsViewHolder = TeamsViewHolder(LayoutInflater.from(context)
-        .inflate(R.layout.team_list_item, parent, false))
+            TeamsViewHolder =
+        TeamsViewHolder(
+            LayoutInflater.from(context)
+                .inflate(R.layout.team_list_item, parent, false)
+        )
 
 
     override fun getItemCount(): Int {

@@ -3,7 +3,7 @@ package com.example.premierleaguestickeralbum
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.premierleaguestickeralbum.teams.TeamsActivity
+import com.example.premierleaguestickeralbum.teams.ui.TeamsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

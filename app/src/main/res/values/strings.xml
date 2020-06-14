@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">PremierLeagueStickerAlbum</string>
     <string name="teams_not_data_message">Album je potpuno prazan!</string>
+    <string name="your_teams_label">Timovi</string>
+    <string name="edit_team_label">Ažuriraj tim</string>
+    <string name="create_team_label">Kreiraj tim</string>
+    <string name="name_label">Ime</string>
+    <string name="logo_url_label">URL grba</string>
+    <string name="create_button_text">Kreiraj</string>
+    <string name="welcome_text">Otvorite album</string>
 </resources>
