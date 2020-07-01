@@ -2,9 +2,7 @@ package com.example.premierleaguestickeralbum.teams.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
@@ -16,13 +14,13 @@ import com.example.premierleaguestickeralbum.teams.model.Tim
 import kotlinx.android.synthetic.main.activity_teams.*
 
 class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your_teams_label),
-    TeamsViewModel.SuccessListener {
+    TeamsViewModel.GetTeamsSuccessListener {
 
     private var viewModel: TeamsViewModel? = null
     private lateinit var teamsAdapter: TeamsAdapter
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -61,16 +59,26 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
         Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CREATE_TEAM_REQUEST_CODE) {
+            viewModel?.getTeams(this)
+        }
+    }
+
     private fun showCreateTeamActivity() {
         val intent = Intent(this, CreateTeamActivity::class.java)
-        startActivity(intent)
+        startActivityForResult(intent, CREATE_TEAM_REQUEST_CODE)
     }
 
     private fun initRecyclerView() {
         teamsRecyclerView.layoutManager = GridLayoutManager(this, 2)
         teamsRecyclerView.setHasFixedSize(true)
-        teamsAdapter =
-            TeamsAdapter(this)
+        teamsAdapter = TeamsAdapter(this)
         teamsRecyclerView.adapter = teamsAdapter
+    }
+
+    companion object {
+        val CREATE_TEAM_REQUEST_CODE = 1
     }
 }

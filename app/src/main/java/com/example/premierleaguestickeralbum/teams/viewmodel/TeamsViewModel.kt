@@ -9,7 +9,7 @@ import retrofit2.Response
 
 class TeamsViewModel : ViewModel() {
 
-    fun getTeams(successListener: SuccessListener) {
+    fun getTeams(successListener: GetTeamsSuccessListener) {
         NetworkClient.getInstance()?.getTeams()?.enqueue(object : Callback<List<Tim>> {
             override fun onFailure(call: Call<List<Tim>>, t: Throwable) {
                 successListener.onFailure(t.message.toString())
@@ -21,7 +21,7 @@ class TeamsViewModel : ViewModel() {
         })
     }
 
-    interface SuccessListener {
+    interface GetTeamsSuccessListener {
         fun onSuccess(teams: List<Tim>)
         fun onFailure(message: String)
     }

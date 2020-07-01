@@ -14,7 +14,7 @@ import com.example.premierleaguestickeralbum.teams.model.Tim
 
 class TeamsAdapter(private val context: Context) : RecyclerView.Adapter<TeamsAdapter.TeamsViewHolder>() {
 
-    private lateinit var teams: List<Tim>
+    private var teams: List<Tim> = arrayListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             TeamsViewHolder =

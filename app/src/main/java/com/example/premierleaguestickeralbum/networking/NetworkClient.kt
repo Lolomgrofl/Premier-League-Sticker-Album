@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Object that initializes Retrofit client
  */
 object NetworkClient {
-    private const val BASE_URL = "http://localhost"
+    private const val BASE_URL = "http://192.168.1.101:8080/"
     private var retrofit: Retrofit? = null
 
     /**

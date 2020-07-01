@@ -8,4 +8,5 @@
     <string name="logo_url_label">URL grba</string>
     <string name="create_button_text">Kreiraj</string>
     <string name="welcome_text">Otvorite album</string>
+    <string name="create_team_successfull_message">Team successfully created!</string>
 </resources>
