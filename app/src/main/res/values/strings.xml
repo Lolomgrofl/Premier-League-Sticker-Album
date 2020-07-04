@@ -13,4 +13,9 @@
     <string name="create_player_button_text">Zalepi sličicu</string>
     <string name="update_player_button_text">Prelepi sličicu</string>
     <string name="create_player_succes_message">Sličica uspešno zalepljena</string>
+    <string name="delete_player_dialog_title">Odlepite sličicu?</string>
+    <string name="delete_player_dialog_message">Da li ste sigurni da želite da odlepite sličicu?</string>
+    <string name="positive_button_text">Da</string>
+    <string name="negative_button_text">Ne</string>
+    <string name="delete_player_success_message">Sličica uspešno odlepljena</string>
 </resources>

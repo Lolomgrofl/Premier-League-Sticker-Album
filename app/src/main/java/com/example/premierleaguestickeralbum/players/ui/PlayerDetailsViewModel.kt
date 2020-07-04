@@ -29,8 +29,26 @@ class PlayerDetailsViewModel : ViewModel() {
         })
     }
 
+    fun deletePlayer(playerId: Long, successListener: DeletePlayerSuccessListener) {
+        NetworkClient.getInstance()?.deletePlayer(playerId)?.enqueue(object : Callback<Boolean> {
+
+            override fun onFailure(call: Call<Boolean>, t: Throwable) {
+                successListener.onFailure(t.message.toString())
+            }
+
+            override fun onResponse(call: Call<Boolean>, response: Response<Boolean>) {
+                response.body()?.let { successListener.onSuccess(it) }
+            }
+        })
+    }
+
     interface SavePlayerSuccessListener {
         fun onSuccess(player: Igrac)
+        fun onFailure(message: String)
+    }
+
+    interface DeletePlayerSuccessListener {
+        fun onSuccess(success: Boolean)
         fun onFailure(message: String)
     }
 }

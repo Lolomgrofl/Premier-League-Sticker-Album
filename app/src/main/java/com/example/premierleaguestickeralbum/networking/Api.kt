@@ -4,9 +4,7 @@ import com.example.premierleaguestickeralbum.players.model.Igrac
 import com.example.premierleaguestickeralbum.players.model.IgracDto
 import com.example.premierleaguestickeralbum.teams.model.Tim
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface Api {
 
@@ -21,4 +19,7 @@ interface Api {
 
     @POST("igrac/save")
     fun savePlayer(@Body igracDto: IgracDto): Call<Igrac>
+
+    @DELETE("igrac/delete/{id}")
+    fun deletePlayer(@Path("id") id: Long): Call<Boolean>
 }

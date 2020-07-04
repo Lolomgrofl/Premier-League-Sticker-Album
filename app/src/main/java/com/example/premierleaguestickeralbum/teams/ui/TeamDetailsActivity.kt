@@ -32,6 +32,13 @@ class TeamDetailsActivity :
         initListeners()
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == SAVE_PLAYER_REQUEST_CODE) {
+            viewModel?.getPlayersList(this)
+        }
+    }
+
     override fun onSuccess(players: List<Igrac>) {
         for (player in players) {
             viewModel?.playersData?.timID = player.tim?.id
@@ -141,7 +148,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID!!
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         gkLayout.setOnClickListener {
@@ -155,7 +162,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         lbLayout.setOnClickListener {
@@ -169,7 +176,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cb1Layout.setOnClickListener {
@@ -183,7 +190,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cb2Layout.setOnClickListener {
@@ -197,7 +204,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         rbLayout.setOnClickListener {
@@ -211,7 +218,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cmf1Layout.setOnClickListener {
@@ -225,7 +232,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cmf2Layout.setOnClickListener {
@@ -239,7 +246,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         lwLayout.setOnClickListener {
@@ -253,7 +260,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         rwLayout.setOnClickListener {
@@ -267,7 +274,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cf1Layout.setOnClickListener {
@@ -281,7 +288,7 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
 
         cf2Layout.setOnClickListener {
@@ -295,11 +302,12 @@ class TeamDetailsActivity :
                     timId = viewModel?.playersData?.timID
                 )
             )
-            startActivity(intent)
+            startActivityForResult(intent, SAVE_PLAYER_REQUEST_CODE)
         }
     }
 
     companion object {
         const val PLAYER_KEY = "player_key"
+        const val SAVE_PLAYER_REQUEST_CODE = 1
     }
 }
