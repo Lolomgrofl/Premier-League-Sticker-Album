@@ -21,5 +21,6 @@
         <activity android:name=".teams.ui.TeamsActivity" />
         <activity android:name=".teams.ui.CreateTeamActivity" />
         <activity android:name=".teams.ui.TeamDetailsActivity" />
+        <activity android:name=".players.ui.PlayerDetailsActivity" />
     </application>
 </manifest>

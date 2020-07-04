@@ -68,7 +68,7 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
 
     override fun onTeamClicked(tim: Tim) {
         val intent = Intent(this, TeamDetailsActivity::class.java)
-        intent.putExtra("", tim)
+        intent.putExtra(TEAM_KEY, tim)
         startActivity(intent)
     }
 

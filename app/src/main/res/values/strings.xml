@@ -9,4 +9,8 @@
     <string name="create_button_text">Kreiraj</string>
     <string name="welcome_text">Otvorite album</string>
     <string name="create_team_successfull_message">Team successfully created!</string>
+    <string name="player_details_title">Detalji sličice</string>
+    <string name="create_player_button_text">Zalepi sličicu</string>
+    <string name="update_player_button_text">Prelepi sličicu</string>
+    <string name="create_player_succes_message">Sličica uspešno zalepljena</string>
 </resources>

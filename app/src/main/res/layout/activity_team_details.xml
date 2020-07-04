@@ -23,10 +23,9 @@
                 android:id="@+id/coachStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/coach_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/coachNameTextView"
@@ -64,10 +63,9 @@
                 android:id="@+id/gkStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/gk_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/gkNameTextView"
@@ -104,10 +102,9 @@
                 android:id="@+id/rbStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/rb_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/rbNameTextView"
@@ -145,10 +142,9 @@
                 android:id="@+id/lbStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/lb_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/lbNameTextView"
@@ -186,10 +182,9 @@
                 android:id="@+id/cb1StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cb_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/cb1NameTextView"
@@ -227,10 +222,9 @@
                 android:id="@+id/cb2StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cb_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/cb2NameTextView"
@@ -268,10 +262,9 @@
                 android:id="@+id/cmf1StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cmf_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/cmf1NameTextView"
@@ -309,10 +302,9 @@
                 android:id="@+id/cmf2StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cmf_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/cmf2NameTextView"
@@ -350,10 +342,9 @@
                 android:id="@+id/lwStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/lw_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/lwNameTextView"
@@ -391,10 +382,9 @@
                 android:id="@+id/rwStickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/rw_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/rwNameTextView"
@@ -433,10 +423,9 @@
                 android:id="@+id/cf1StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cf_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/cf1NameTextView"
@@ -475,10 +464,9 @@
                 android:id="@+id/cf2StickerImageView"
                 android:layout_width="@dimen/player_sticker_image_size"
                 android:layout_height="@dimen/player_sticker_image_size"
-                android:src="@drawable/placeholder"
+                android:src="@drawable/cf_placeholder"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
                 android:id="@+id/cf2NameTextView"

@@ -3,6 +3,8 @@ package com.example.premierleaguestickeralbum.teams.ui
 import androidx.lifecycle.ViewModel
 import com.example.premierleaguestickeralbum.networking.NetworkClient
 import com.example.premierleaguestickeralbum.players.model.Igrac
+import com.example.premierleaguestickeralbum.players.model.IgracDto
+import com.example.premierleaguestickeralbum.players.ui.PlayersData
 import com.example.premierleaguestickeralbum.teams.model.Tim
 import retrofit2.Call
 import retrofit2.Callback
@@ -11,6 +13,7 @@ import retrofit2.Response
 class TeamDetailsViewModel : ViewModel() {
 
     var teamData: Tim? = null
+    var playersData = PlayersData()
 
     fun setData(data: Tim?) {
         teamData = data
@@ -27,7 +30,7 @@ class TeamDetailsViewModel : ViewModel() {
                     val allPlayers = response.body() as List<Igrac>
                     var teamPlayers: MutableList<Igrac> = arrayListOf()
                     for (player in allPlayers) {
-                        if (player.timId == teamData?.id) {
+                        if (player.tim?.id == teamData?.id) {
                             teamPlayers.add(player)
                         }
                     }
