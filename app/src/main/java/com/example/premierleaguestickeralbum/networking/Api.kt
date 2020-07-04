@@ -1,5 +1,6 @@
 package com.example.premierleaguestickeralbum.networking
 
+import com.example.premierleaguestickeralbum.players.model.Igrac
 import com.example.premierleaguestickeralbum.teams.model.Tim
 import retrofit2.Call
 import retrofit2.http.Body
@@ -11,6 +12,9 @@ interface Api {
     @GET("tim/returnAll")
     fun getTeams(): Call<List<Tim>>
 
-    @POST("tim/save")
-    fun createTeam(@Body tim: Tim): Call<Tim>
+@POST("tim/save")
+fun createTeam(@Body tim: Tim): Call<Tim>
+
+@GET("igrac/returnAll")
+fun getPlayers(): Call<List<Igrac>>
 }

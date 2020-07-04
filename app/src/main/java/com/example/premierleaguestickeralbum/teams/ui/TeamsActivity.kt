@@ -14,7 +14,7 @@ import com.example.premierleaguestickeralbum.teams.model.Tim
 import kotlinx.android.synthetic.main.activity_teams.*
 
 class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your_teams_label),
-    TeamsViewModel.GetTeamsSuccessListener {
+    TeamsViewModel.GetTeamsSuccessListener, TeamsAdapter.TeamClickListener {
 
     private var viewModel: TeamsViewModel? = null
     private lateinit var teamsAdapter: TeamsAdapter
@@ -66,6 +66,12 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
         }
     }
 
+    override fun onTeamClicked(tim: Tim) {
+        val intent = Intent(this, TeamDetailsActivity::class.java)
+        intent.putExtra("", tim)
+        startActivity(intent)
+    }
+
     private fun showCreateTeamActivity() {
         val intent = Intent(this, CreateTeamActivity::class.java)
         startActivityForResult(intent, CREATE_TEAM_REQUEST_CODE)
@@ -74,11 +80,12 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
     private fun initRecyclerView() {
         teamsRecyclerView.layoutManager = GridLayoutManager(this, 2)
         teamsRecyclerView.setHasFixedSize(true)
-        teamsAdapter = TeamsAdapter(this)
+        teamsAdapter = TeamsAdapter(this, this)
         teamsRecyclerView.adapter = teamsAdapter
     }
 
     companion object {
-        val CREATE_TEAM_REQUEST_CODE = 1
+        const val CREATE_TEAM_REQUEST_CODE = 1
+        const val TEAM_KEY = "team_key"
     }
 }

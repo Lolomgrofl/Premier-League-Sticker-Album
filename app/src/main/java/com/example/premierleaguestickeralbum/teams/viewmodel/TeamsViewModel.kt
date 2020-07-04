@@ -22,7 +22,7 @@ class TeamsViewModel : ViewModel() {
     }
 
     interface GetTeamsSuccessListener {
-        fun onSuccess(teams: List<Tim>)
+        fun onSuccess(players: List<Tim>)
         fun onFailure(message: String)
     }
 }

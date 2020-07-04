@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/coachLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/gkLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/coachStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/coachNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/coachStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/coachStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/coachStickerImageView"
+                tools:text="Alex Ferguson" />
+
+            <TextView
+                android:id="@+id/coachPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: Coach"
+                app:layout_constraintEnd_toEndOf="@+id/coachNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/coachNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/coachNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gkLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/coachLayout"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/gkStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/gkNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/gkStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/gkStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/gkStickerImageView"
+                tools:text="Van der Sar" />
+
+            <TextView
+                android:id="@+id/gkPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: GK"
+                app:layout_constraintEnd_toEndOf="@+id/gkNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/gkNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/gkNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rbLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/lbLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coachLayout">
+
+            <ImageView
+                android:id="@+id/rbStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/rbNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rbStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/rbStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/rbStickerImageView"
+                tools:text="Rafael" />
+
+            <TextView
+                android:id="@+id/rbPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: RB"
+                app:layout_constraintEnd_toEndOf="@+id/rbNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/rbNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/rbNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lbLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rbLayout"
+            app:layout_constraintTop_toBottomOf="@+id/gkLayout">
+
+
+            <ImageView
+                android:id="@+id/lbStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/lbNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lbStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/lbStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/lbStickerImageView"
+                tools:text="Patice Evra" />
+
+            <TextView
+                android:id="@+id/lbPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: LB"
+                app:layout_constraintEnd_toEndOf="@+id/lbNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/lbNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/lbNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cb1Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/cb2Layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbLayout">
+
+
+            <ImageView
+                android:id="@+id/cb1StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cb1NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb1StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cb1StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cb1StickerImageView"
+                tools:text="Nemanja Vidic" />
+
+            <TextView
+                android:id="@+id/cb1PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CB"
+                app:layout_constraintEnd_toEndOf="@+id/cb1NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cb1NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cb1NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cb2Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cb1Layout"
+            app:layout_constraintTop_toBottomOf="@+id/lbLayout">
+
+
+            <ImageView
+                android:id="@+id/cb2StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cb2NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cb2StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cb2StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cb2StickerImageView"
+                tools:text="Rio Ferdinand" />
+
+            <TextView
+                android:id="@+id/cb2PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CB"
+                app:layout_constraintEnd_toEndOf="@+id/cb2NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cb2NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cb2NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cmf1Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/cmf2Layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb1Layout">
+
+
+            <ImageView
+                android:id="@+id/cmf1StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cmf1NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cmf1StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cmf1StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cmf1StickerImageView"
+                tools:text="Paul Scholes" />
+
+            <TextView
+                android:id="@+id/cmf1PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CMF"
+                app:layout_constraintEnd_toEndOf="@+id/cmf1NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cmf1NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cmf1NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cmf2Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cmf1Layout"
+            app:layout_constraintTop_toBottomOf="@+id/cb2Layout">
+
+
+            <ImageView
+                android:id="@+id/cmf2StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cmf2NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cmf2StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cmf2StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cmf2StickerImageView"
+                tools:text="Daren FLetcher" />
+
+            <TextView
+                android:id="@+id/cmf2PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CMF"
+                app:layout_constraintEnd_toEndOf="@+id/cmf2NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cmf2NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cmf2NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lwLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toStartOf="@+id/rwLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cmf1Layout">
+
+
+            <ImageView
+                android:id="@+id/lwStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/lwNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/lwStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/lwStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/lwStickerImageView"
+                tools:text="Nani" />
+
+            <TextView
+                android:id="@+id/lwPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: LW"
+                app:layout_constraintEnd_toEndOf="@+id/lwNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/lwNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/lwNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rwLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lwLayout"
+            app:layout_constraintTop_toBottomOf="@+id/cmf2Layout">
+
+
+            <ImageView
+                android:id="@+id/rwStickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/rwNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/rwStickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/rwStickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/rwStickerImageView"
+                tools:text="C Ronaldo" />
+
+            <TextView
+                android:id="@+id/rwPositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: RW"
+                app:layout_constraintEnd_toEndOf="@+id/rwNameTextView"
+                app:layout_constraintStart_toStartOf="@+id/rwNameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/rwNameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cf1Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_padding"
+            app:layout_constraintEnd_toStartOf="@+id/rwLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lwLayout">
+
+
+            <ImageView
+                android:id="@+id/cf1StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cf1NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cf1StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cf1StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cf1StickerImageView"
+                tools:text="Berbatov" />
+
+            <TextView
+                android:id="@+id/cf1PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CF"
+                app:layout_constraintEnd_toEndOf="@+id/cf1NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cf1NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cf1NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cf2Layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            android:paddingBottom="@dimen/default_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cf1Layout"
+            app:layout_constraintTop_toBottomOf="@+id/rwLayout">
+
+
+            <ImageView
+                android:id="@+id/cf2StickerImageView"
+                android:layout_width="@dimen/player_sticker_image_size"
+                android:layout_height="@dimen/player_sticker_image_size"
+                android:src="@drawable/placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/cf2NameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cf2StickerImageView"
+                app:layout_constraintStart_toStartOf="@+id/cf2StickerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/cf2StickerImageView"
+                tools:text="Wayne Rooney" />
+
+            <TextView
+                android:id="@+id/cf2PositionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:text="Position: CF"
+                app:layout_constraintEnd_toEndOf="@+id/cf2NameTextView"
+                app:layout_constraintStart_toStartOf="@+id/cf2NameTextView"
+                app:layout_constraintTop_toBottomOf="@+id/cf2NameTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
