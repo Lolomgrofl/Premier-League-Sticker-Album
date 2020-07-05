@@ -73,7 +73,8 @@ class TeamsActivity : BaseToolbarActivity(R.layout.activity_teams, R.string.your
     }
 
     private fun showCreateTeamActivity() {
-        val intent = Intent(this, CreateTeamActivity::class.java)
+        val intent = Intent(this, SaveTeamActivity::class.java)
+        intent.putExtra(SaveTeamActivity.IS_CREATE_FLOW, true)
         startActivityForResult(intent, CREATE_TEAM_REQUEST_CODE)
     }
 

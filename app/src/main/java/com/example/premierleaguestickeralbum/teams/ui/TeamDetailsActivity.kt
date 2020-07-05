@@ -2,6 +2,8 @@ package com.example.premierleaguestickeralbum.teams.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
@@ -10,6 +12,7 @@ import com.example.premierleaguestickeralbum.R
 import com.example.premierleaguestickeralbum.players.model.Igrac
 import com.example.premierleaguestickeralbum.players.model.IgracDto
 import com.example.premierleaguestickeralbum.players.ui.PlayerDetailsActivity
+import com.example.premierleaguestickeralbum.teams.ui.SaveTeamActivity.Companion.IS_CREATE_FLOW
 import com.example.premierleaguestickeralbum.teams.ui.TeamsActivity.Companion.TEAM_KEY
 import kotlinx.android.synthetic.main.activity_team_details.*
 
@@ -30,6 +33,30 @@ class TeamDetailsActivity :
         supportActionBar?.title = viewModel?.teamData?.ime
         viewModel?.getPlayersList(this)
         initListeners()
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.edit_menu, menu)
+        return super.onPrepareOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            R.id.optionEdit -> {
+                val intent = Intent(this, SaveTeamActivity::class.java)
+                intent.putExtra(TEAM_KEY, viewModel?.teamData)
+                intent.putExtra(IS_CREATE_FLOW, false)
+                startActivity(intent)
+                true
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -77,8 +77,8 @@ class PlayerDetailsActivity :
         if (success) {
             Toast.makeText(this, getString(R.string.delete_player_success_message),
                 Toast.LENGTH_LONG).show()
-            finish()
             setResult(SAVE_PLAYER_REQUEST_CODE)
+            finish()
         }
     }
 
@@ -110,14 +110,14 @@ class PlayerDetailsActivity :
         if (viewModel?.playerData?.ime.isNullOrEmpty() &&
             viewModel?.playerData?.slikaUrl.isNullOrEmpty()
         ) {
-            createButton.text = getString(R.string.create_player_button_text)
+            saveButton.text = getString(R.string.create_player_button_text)
         } else {
-            createButton.text = getString(R.string.update_player_button_text)
+            saveButton.text = getString(R.string.update_player_button_text)
         }
     }
 
     private fun initListeners() {
-        createButton.setOnClickListener {
+        saveButton.setOnClickListener {
            viewModel?.savePlayer(getInputValues(), this)
         }
     }

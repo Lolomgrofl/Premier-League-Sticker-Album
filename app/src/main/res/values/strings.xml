@@ -18,4 +18,8 @@
     <string name="positive_button_text">Da</string>
     <string name="negative_button_text">Ne</string>
     <string name="delete_player_success_message">Sličica uspešno odlepljena</string>
+    <string name="delete_team_success_message">Tim uspešno uklonjen</string>
+    <string name="save_button_text">Sačuvaj</string>
+    <string name="delete_team_dialog_title">Obrišite tim?</string>
+    <string name="delete_team_dialog_message">Da li ste sigurni da želite da obrišete tim?</string>
 </resources>

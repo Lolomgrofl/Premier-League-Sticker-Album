@@ -22,4 +22,7 @@ interface Api {
 
     @DELETE("igrac/delete/{id}")
     fun deletePlayer(@Path("id") id: Long): Call<Boolean>
+
+    @DELETE("tim/delete/{id}")
+    fun deleteTeam(@Path("id") id: Long): Call<Boolean>
 }

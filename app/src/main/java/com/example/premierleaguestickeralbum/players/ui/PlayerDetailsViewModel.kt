@@ -30,7 +30,7 @@ class PlayerDetailsViewModel : ViewModel() {
     }
 
     fun deletePlayer(playerId: Long, successListener: DeletePlayerSuccessListener) {
-        NetworkClient.getInstance()?.deletePlayer(playerId)?.enqueue(object : Callback<Boolean> {
+        NetworkClient.getInstance()?.deleteTeam(playerId)?.enqueue(object : Callback<Boolean> {
 
             override fun onFailure(call: Call<Boolean>, t: Throwable) {
                 successListener.onFailure(t.message.toString())
